@@ -1,5 +1,5 @@
-from pyecore.ecore import *
-import pyecore.ecore as Ecore
+from pyecore.pyecore.ecore import *
+import pyecore.pyecore.ecore as Ecore
 from model import ISynchable
 from model import Node
 

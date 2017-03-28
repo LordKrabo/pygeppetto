@@ -1,5 +1,5 @@
-from pyecore.ecore import *
-import pyecore.ecore as Ecore
+from pyecore.pyecore.ecore import *
+import pyecore.pyecore.ecore as Ecore
 from model import ISynchable
 from model import Node
 
@@ -64,7 +64,7 @@ class Composite(Value):
 
 
 class Quantity(Value):
-    scalingFactor = EAttribute(eType=EInt)
+    scalingFactor = EAttribute(eType=EInteger)
     value = EAttribute(eType=EDouble)
 
     def __init__(self):
@@ -79,7 +79,7 @@ class Unit(Value):
 
 
 class TimeSeries(Value):
-    scalingFactor = EAttribute(eType=EInt)
+    scalingFactor = EAttribute(eType=EInteger)
     value = EAttribute(eType=EDouble, upper=-1)
     unit = EReference(containment=True)
 
@@ -182,7 +182,7 @@ class Connection(Value):
 
 
 class ArrayElement(Value):
-    index = EAttribute(eType=EInt)
+    index = EAttribute(eType=EInteger)
     position = EReference(containment=True)
     initialValue = EReference(containment=True)
 

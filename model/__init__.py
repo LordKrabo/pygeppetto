@@ -1,4 +1,4 @@
-import pyecore.ecore as Ecore
+import pyecore.pyecore.ecore as Ecore
 from .model import getEClassifier, eClassifiers
 from .model import name, nsURI, nsPrefix, eClass
 from .model import GeppettoModel, Node, GeppettoLibrary, LibraryManager, ExperimentState, VariableValue, Tag, DomainModel, ModelFormat, ExternalDomainModel, FileFormat, StringToStringMap, ISynchable

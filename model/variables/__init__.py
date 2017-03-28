@@ -1,4 +1,4 @@
-import pyecore.ecore as Ecore
+import pyecore.pyecore.ecore as Ecore
 from .variables import getEClassifier, eClassifiers
 from .variables import name, nsURI, nsPrefix, eClass
 from .variables import Variable, TypeToValueMap

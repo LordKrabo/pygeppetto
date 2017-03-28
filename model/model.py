@@ -1,5 +1,5 @@
-from pyecore.ecore import *
-import pyecore.ecore as Ecore
+from pyecore.pyecore.ecore import *
+import pyecore.pyecore.ecore as Ecore
 
 name = 'model'
 nsURI = 'https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore'
@@ -33,8 +33,10 @@ class LibraryManager(EObject, metaclass=MetaEClass):
 
 
 class ExperimentState(EObject, metaclass=MetaEClass):
-    experimentId = EAttribute(eType=ELong)
-    projectId = EAttribute(eType=ELong)
+    #experimentId = EAttribute(eType=ELong)
+    experimentId = EAttribute(eType=EInteger)
+    #projectId = EAttribute(eType=ELong)
+    projectId = EAttribute(eType=EInteger)
     recordedVariables = EReference(upper=-1, containment=True)
     setParameters = EReference(upper=-1, containment=True)
 

@@ -1,4 +1,4 @@
-import pyecore.ecore as Ecore
+import pyecore.pyecore.ecore as Ecore
 from .types import getEClassifier, eClassifiers
 from .types import name, nsURI, nsPrefix, eClass
 from .types import Type, VisualType, ImportType, CompositeType, PointerType, QuantityType, ParameterType, StateVariableType, DynamicsType, ArgumentType, ExpressionType, HTMLType, TextType, URLType, PointType, ArrayType, CompositeVisualType, ConnectionType, SimpleType, ImageType
