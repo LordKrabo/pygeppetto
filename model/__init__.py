@@ -122,6 +122,11 @@ for subpack in eSubpackages:
 
 geppetto_master_uri = ('https://raw.githubusercontent.com/openworm'
                        'org.geppetto.model/master/src/main/resources'
+# Manually register all the URI and master URI in the global registry
+# This registering is performed outside the previous 'for' to ease future
+# code merging (in case of new metamodel versions)
+geppetto_master_uri = ('https://raw.githubusercontent.com/openworm/'
+                       'org.geppetto.model/master/src/main/resources/'
                        'geppettoModel.ecore')
 
 global_registry[nsURI] = model
