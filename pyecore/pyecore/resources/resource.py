@@ -166,7 +166,8 @@ class Resource(object):
 
     def prefix2epackage(self, prefix):
         try:
-            return self.resource_set.metamodel_registry[self.prefixes[prefix]]
+            return self.resource_set.metamodel_registry.get(self.prefixes[prefix])
+            #return self.resource_set.metamodel_registry[self.prefixes[prefix]]
         except Exception:
             try:
                 return global_registry[self.prefixes[prefix]]

@@ -2,8 +2,6 @@
 PyEcore: A Pythonic Implementation of the Eclipse Modeling Framework
 ====================================================================
 
-.. highlight:: python
-
 |master-build| |license|
 
 .. |master-build| image:: https://travis-ci.org/aranega/pyecore.svg?branch=master
@@ -378,8 +376,6 @@ small example:
     # We can access the EClass instance from the created instance and go back
     >>> myclass_instance.eClass
     <EClass name="MyClass">
-    >>> assert myclass_instance.eCla.
-
     >>> assert myclass_instance.eClass.python_class is MyClass.python_class
     >>> assert myclass_instance.eClass.python_class.eClass is MyClass
     >>> assert myclass_instance.__class__ is MyClass.python_class
@@ -404,8 +400,8 @@ The Python class hierarchie (inheritance tree) associated to the EClass instance
      pyecore.ecore.ENotifier,
      object]
     >>> b_instance = B()
-    >>> assert isinstance(b, A.python_class)
-    >>> assert EcoreUtils.isinstance(b, A)
+    >>> assert isinstance(b_instance, A.python_class)
+    >>> assert EcoreUtils.isinstance(b_instance, A)
 
 
 Importing an Existing XMI Metamodel/Model
@@ -528,9 +524,13 @@ You can also use a ``ResourceSet`` to deal with this:
 Installation
 ============
 
-At the moment, the library is not on `pypi`, it will be added when the XMI
-deserialization/serialization will be working. At the moment, the installation
-must be performed manually (better in a virtualenv):
+PyEcore is available on ``pypi``, you can simply install it using ``pip``:
+
+.. code-block:: bash
+
+    $ pip install pyecore
+
+The installation can also be performed manually (better in a virtualenv):
 
 .. code-block:: bash
 
@@ -608,10 +608,10 @@ resources references, not able to resolve file path uris and stuffs.
 
 The things that are in the roadmap:
 
-* documentation,
+* EMF proxies
 * object deletion,
+* documentation,
 * command system (?).
-
 
 Existing Projects
 =================

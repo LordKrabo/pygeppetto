@@ -1,5 +1,7 @@
-from pyecore.pyecore.ecore import *
-import pyecore.pyecore.ecore as Ecore
+#from pyecore.pyecore.ecore import *
+from pyecore.ecore import *
+#import pyecore.pyecore.ecore as Ecore
+import pyecore.ecore as Ecore
 
 name = 'model'
 nsURI = 'https://raw.githubusercontent.com/openworm/org.geppetto.model/development/src/main/resources/geppettoModel.ecore'
